@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3 uid="uid://whdrgt0icuqg"]
+
+[ext_resource type="Texture2D" uid="uid://buknp526i3xpf" path="res://icon.svg" id="1_xvaac"]
+
+[node name="GridContainer" type="GridContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Pet" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_xvaac")
+
+[node name="StatContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabels" type="VBoxContainer" parent="VBoxContainer/StatContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HealthLabel" type="Label" parent="VBoxContainer/StatContainer/StatLabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "HP:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AttackLabel" type="Label" parent="VBoxContainer/StatContainer/StatLabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ATK:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExperienceLabel" type="Label" parent="VBoxContainer/StatContainer/StatLabels"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "EXP:	"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="VBoxContainer" parent="VBoxContainer/StatContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Health" type="Label" parent="VBoxContainer/StatContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Attack" type="Label" parent="VBoxContainer/StatContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EXP" type="Label" parent="VBoxContainer/StatContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
