@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jlhcjrhyxypv"
-path="res://.godot/imported/blue.png-6e879775ff1d8c97c89cb46207557477.ctex"
+uid="uid://ba5i3lirnpc0j"
+path="res://.godot/imported/chaos.png-f101b28b017cc8411041ddabc73e7fa6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pets/img/blue.png"
-dest_files=["res://.godot/imported/blue.png-6e879775ff1d8c97c89cb46207557477.ctex"]
+source_file="res://pets/img/chaos.png"
+dest_files=["res://.godot/imported/chaos.png-f101b28b017cc8411041ddabc73e7fa6.ctex"]
 
 [params]
 

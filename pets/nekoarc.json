@@ -1,9 +1,0 @@
-{
-	"name": "Blue Neko Arc",
-	"description": "Blue-runyuuu",
-	"attack" : 5,
-	"health" : 4,
-	"script" : "res://pets/nekoarc.gd",
-	"texture" : "res://pets/img/blue.png",
-	"tier" : 1
-}

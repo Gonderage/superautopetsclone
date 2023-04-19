@@ -1,0 +1,10 @@
+{
+	"name": "Modern Neko Arc",
+	"description": "Blue-runyuuu",
+	"attack" : 5,
+	"health" : 4,
+	"script" : "res://pets/scripts/modern.gd",
+	"texture" : "res://pets/img/modern.png",
+	"tier" : 1,
+	"sfx" : "res://pets/sfx/burenyuu.mp3"
+}

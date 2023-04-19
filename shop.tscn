@@ -2,19 +2,10 @@
 
 [ext_resource type="Script" path="res://shop_manager.gd" id="1_pcppw"]
 
-[node name="Shop" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Shop" type="Node2D"]
 
-[node name="ShopManager" type="Node2D" parent="." node_paths=PackedStringArray("pet_template", "food_template")]
+[node name="ShopManager" type="Node2D" parent="." node_paths=PackedStringArray("food_template")]
 script = ExtResource("1_pcppw")
-pet_template = NodePath("PetTemplate")
 food_template = NodePath("FoodTemplate")
-
-[node name="PetTemplate" type="Sprite2D" parent="ShopManager"]
 
 [node name="FoodTemplate" type="Sprite2D" parent="ShopManager"]

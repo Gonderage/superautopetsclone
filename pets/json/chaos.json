@@ -1,0 +1,10 @@
+{
+	"name": "Neko Arc Chaos",
+	"description": "nyururu",
+	"attack" : 4,
+	"health" : 3,
+	"script" : "res://pets/scripts/chaos.gd",
+	"texture" : "res://pets/img/chaos.png",
+	"tier" : 1,
+	"sfx" : "res://pets/sfx/burenyuu.mp3"
+}

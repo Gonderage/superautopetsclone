@@ -1,0 +1,10 @@
+{
+	"name": "Fat Neko Arc",
+	"description": "buhuuu",
+	"attack" : 4,
+	"health" : 3,
+	"script" : "res://Pet.gd",
+	"texture" : "res://pets/img/fat.png",
+	"tier" : 1,
+	"sfx" : "res://pets/sfx/burenyuu.mp3"
+}
