@@ -15,6 +15,6 @@ script = ExtResource("1_pcppw")
 pet_template = NodePath("PetTemplate")
 food_template = NodePath("FoodTemplate")
 
-[node name="PetTemplate" type="Node2D" parent="ShopManager"]
+[node name="PetTemplate" type="Sprite2D" parent="ShopManager"]
 
-[node name="FoodTemplate" type="Node2D" parent="ShopManager"]
+[node name="FoodTemplate" type="Sprite2D" parent="ShopManager"]

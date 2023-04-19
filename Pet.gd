@@ -1,4 +1,4 @@
-extends Node2D
+extends Sprite2D
 class_name Pet
 
 var pet_name:String = "Pet"
