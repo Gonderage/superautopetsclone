@@ -15,13 +15,15 @@ var current_neko:String = "modern"
 
 func _process(delta):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		spawn_pet(current_neko, $"..", get_global_mouse_position())
+		spawn_pet(current_neko, %TeamGrid)
 		if current_neko == "modern":
 			current_neko = "chaos"
 		else: current_neko = "modern"
-		
+	
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT) and %TeamGrid.get_child_count()>0:
+		%TeamGrid.get_child(-1).queue_free()
 
-func spawn_pet(pet_name:String, parent, new_position:Vector2):
+func spawn_pet(pet_name:String, parent):
 	var path = "res://pets/json/" + pet_name + ".json"
 	var file = FileAccess.open(path, FileAccess.READ)
 	var _json = JSON.parse_string(file.get_as_text())
@@ -30,7 +32,7 @@ func spawn_pet(pet_name:String, parent, new_position:Vector2):
 	var new_pet = pet_template.instantiate()
 	new_pet.set_script(load(_json["script"]))	#Script goes first or you can not set the variables.
 	new_pet.loadJSON(_json,shop_upgrade,max_buy_price,pet_discount)
-	new_pet.position = new_position
+	new_pet.size = Vector2(128,128)
 	
 	#Add to the scene
 	parent.add_child(new_pet)

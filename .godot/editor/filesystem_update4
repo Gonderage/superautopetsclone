@@ -1,8 +1,3 @@
 res://shop.tscn
+res://pet_template.tscn
 res://shop_manager.gd
-res://pets/json/modern.json
-res://pets/json/chaos.json
-res://pets/scripts/chaos.gd
-res://Pet.gd
-res://pets/json/fat.json
-res://pets/scripts/modern.gd

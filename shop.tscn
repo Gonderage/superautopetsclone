@@ -9,3 +9,11 @@ script = ExtResource("1_pcppw")
 food_template = NodePath("FoodTemplate")
 
 [node name="FoodTemplate" type="Sprite2D" parent="ShopManager"]
+
+[node name="TeamGrid" type="GridContainer" parent="."]
+unique_name_in_owner = true
+offset_left = 125.0
+offset_top = 142.0
+offset_right = 825.0
+offset_bottom = 270.0
+columns = 5
