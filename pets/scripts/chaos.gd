@@ -2,7 +2,6 @@ extends "res://Pet.gd"
 
 var disp = 0
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x = position.x + sin(disp)
+	position.x += sin(disp*4)
 	disp += delta*3

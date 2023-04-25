@@ -14,14 +14,18 @@ var max_buy_price:int = 3
 var current_neko:String = "modern"
 
 func _process(delta):
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if Input.is_action_just_pressed("ui_accept"):
 		spawn_pet(current_neko, %TeamGrid)
 		if current_neko == "modern":
 			current_neko = "chaos"
 		else: current_neko = "modern"
+		if %TeamGrid.get_child_count()>5:
+			%TeamGrid.get_child(0).queue_free()
+			$AudioStreamPlayer.play()
 	
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT) and %TeamGrid.get_child_count()>0:
+	if Input.is_action_just_pressed("ui_cancel") and %TeamGrid.get_child_count()>0:
 		%TeamGrid.get_child(-1).queue_free()
+		$AudioStreamPlayer.play()
 
 func spawn_pet(pet_name:String, parent):
 	var path = "res://pets/json/" + pet_name + ".json"
@@ -32,7 +36,6 @@ func spawn_pet(pet_name:String, parent):
 	var new_pet = pet_template.instantiate()
 	new_pet.set_script(load(_json["script"]))	#Script goes first or you can not set the variables.
 	new_pet.loadJSON(_json,shop_upgrade,max_buy_price,pet_discount)
-	new_pet.size = Vector2(128,128)
 	
 	#Add to the scene
 	parent.add_child(new_pet)
