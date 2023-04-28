@@ -1,2 +1,6 @@
 res://shop.tscn
+res://PetLib.gd
+res://shop_manager.gd
+res://pet_template.tscn
+res://Pet.gd
 res://Modern Neko Arc.tscn

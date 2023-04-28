@@ -13,6 +13,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="ShopManager" type="Node2D" parent="." node_paths=PackedStringArray("food_template")]
 script = ExtResource("1_pcppw")
@@ -55,19 +57,18 @@ layout_mode = 2
 
 [node name="ShopPets" type="GridContainer" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
-anchor_left = -0.0526042
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0807291
 anchor_top = 0.514815
-anchor_right = -0.0526042
-anchor_bottom = 0.514815
-offset_left = 256.0
-offset_right = 472.0
-offset_bottom = 40.0
+anchor_right = 0.620729
+anchor_bottom = 0.716296
+offset_right = -820.8
+offset_bottom = -177.6
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4.8, 5.44)
 columns = 5
-metadata/_edit_use_anchors_ = true
 
 [node name="Modern Neko Arc" parent="ShopPets" instance=ExtResource("3_ksip6")]
 layout_mode = 2
@@ -87,13 +88,12 @@ layout_mode = 2
 [node name="ShopFood" type="GridContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-anchor_left = 0.505729
+anchor_left = 0.639062
 anchor_top = 0.522222
-anchor_right = 0.505729
-anchor_bottom = 0.522222
-offset_left = 256.0
-offset_right = 340.0
-offset_bottom = 40.0
+anchor_right = 0.873562
+anchor_bottom = 0.720741
+offset_right = -366.24
+offset_bottom = -174.4
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(5.36, 5.36)
@@ -108,38 +108,41 @@ layout_mode = 2
 
 [node name="RollButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -183.0
-offset_right = 37.0
-offset_bottom = -152.0
+anchors_preset = -1
+anchor_top = 0.830556
+anchor_right = 0.119479
+anchor_bottom = 1.00852
+offset_right = -192.4
+offset_bottom = -161.2
 grow_vertical = 0
 scale = Vector2(6.2, 6.2)
 text = "Roll"
+metadata/_edit_use_anchors_ = true
 
 [node name="SellButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 1192.0
-offset_top = -183.0
-offset_right = 1229.0
-offset_bottom = -152.0
+anchors_preset = -1
+anchor_left = 0.620833
+anchor_top = 0.830556
+anchor_right = 0.740313
+anchor_bottom = 1.00852
+offset_right = -192.4
+offset_bottom = -161.2
 grow_vertical = 0
 scale = Vector2(6.2, 6.2)
 text = "Sell"
+metadata/_edit_use_anchors_ = true
 
 [node name="SellButton2" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 1463.0
-offset_top = -183.0
-offset_right = 1500.0
-offset_bottom = -152.0
+anchors_preset = -1
+anchor_left = 0.761979
+anchor_top = 0.830556
+anchor_right = 0.999229
+anchor_bottom = 1.00852
+offset_right = -418.52
+offset_bottom = -161.2
 grow_vertical = 0
 scale = Vector2(5.84, 6.2)
 text = "End Turn"
+metadata/_edit_use_anchors_ = true

@@ -9,7 +9,9 @@ var tier:int = 1
 var experience:int = 0
 var buy_price:int = 3
 var sell_price:int = 1
-var player:AudioStreamPlayer
+@onready var player:AudioStreamPlayer = $AudioStreamPlayer
+
+signal selected
 
 func loadJSON(_json,shop_upgrade,max_buy_price,pet_discount):
 	name = _json["name"]
@@ -19,5 +21,9 @@ func loadJSON(_json,shop_upgrade,max_buy_price,pet_discount):
 	tier = _json["tier"]
 	buy_price = clampi(max_buy_price - pet_discount, 0, max_buy_price)
 	texture = load(_json["texture"])
-	player = $AudioStreamPlayer
 	player.stream = load(_json["sfx"])
+
+func _gui_input(event):
+	if Input.is_action_just_pressed("left_click"):
+#		selected.emit()
+		player.play()

@@ -1,14 +1,16 @@
 2a60927148abd1d33b818b535e306557
-::res://::1682395123
+::res://::1682659401
 icon.svg::CompressedTexture2D::3811659060639423967::1681963780::1681965071::1::::<><>::
-Modern Neko Arc.tscn::PackedScene::718524597618491277::1681980220::0::1::::<><>::uid://jlhcjrhyxypv<>res://pets/scripts/modern.gd<>uid://d00dos2d1etuy
-Pet.gd::GDScript::-1::1681963780::0::1::::Pet<>TextureRect<>::
-pet_template.tscn::PackedScene::7982135496609438121::1681980100::0::1::::<><>::
+Modern Neko Arc.tscn::PackedScene::718524597618491277::1682395643::0::1::::<><>::uid://jlhcjrhyxypv<>res://pets/scripts/modern.gd<>uid://d00dos2d1etuy
+Pet.gd::GDScript::-1::1682408746::0::1::::Pet<>TextureRect<>::
+pet_template.tscn::PackedScene::7982135496609438121::1682409057::0::1::::<><>::uid://byniewh3rxgvm
 README.md::TextFile::-1::1681963780::0::1::::<><>::
+PetLibrary.gd::GDScript::-1::1682659428::0::1::::<>Node<>::
 sapbg.jpg::CompressedTexture2D::5077485044348706746::1681968660::1681968663::1::::<><>::
-shop.tscn::PackedScene::7289562139644673249::1681980298::0::1::::<><>::res://shop_manager.gd<>uid://qox3lrvc4wnh<>uid://kib83ngd48hd
-shop_manager.gd::GDScript::-1::1681966809::0::1::::<>Node2D<>::
-::res://pets/::1681963780
+shop.tscn::PackedScene::7289562139644673249::1682409075::0::1::::<><>::res://shop_manager.gd<>uid://qox3lrvc4wnh<>uid://kib83ngd48hd
+shop_manager.gd::GDScript::-1::1682409057::0::1::::<>Node2D<>::
+::res://pets/::1682407673
+tile.png::CompressedTexture2D::4098283888549561974::1682407667::1682407673::1::::<><>::
 ::res://pets/img/::1681976515
 3d.png::CompressedTexture2D::4601087109106045315::1681976475::1681976514::1::::<><>::
 amogus.png::CompressedTexture2D::8405126993482888044::1681975046::1681976514::1::::<><>::

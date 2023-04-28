@@ -11,17 +11,15 @@ var pet_discount:int = 0
 var food_discount:int = 0
 var max_buy_price:int = 3
 
-var current_neko:String = "modern"
+var current_neko:int = 0
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
-		spawn_pet(current_neko, %TeamGrid)
-		if current_neko == "modern":
-			current_neko = "chaos"
-		else: current_neko = "modern"
-		if %TeamGrid.get_child_count()>5:
-			%TeamGrid.get_child(0).queue_free()
-			$AudioStreamPlayer.play()
+		spawn_pet(PetLib.get_pet(current_neko,1), %TeamGrid)
+		current_neko = (current_neko + 1) % 2
+		
+		if %TeamGrid.get_child_count()>5: #if more than 5 pets--
+			%TeamGrid.get_child(0).queue_free() #--then KILL the first pet
 	
 	if Input.is_action_just_pressed("ui_cancel") and %TeamGrid.get_child_count()>0:
 		%TeamGrid.get_child(-1).queue_free()
@@ -36,6 +34,7 @@ func spawn_pet(pet_name:String, parent):
 	var new_pet = pet_template.instantiate()
 	new_pet.set_script(load(_json["script"]))	#Script goes first or you can not set the variables.
 	new_pet.loadJSON(_json,shop_upgrade,max_buy_price,pet_discount)
+#	new_pet.selected.connect(_on_selected) #bind signal to function so 
 	
 	#Add to the scene
 	parent.add_child(new_pet)
@@ -52,3 +51,6 @@ func spawn_food(food_name:String):
 	new_food.food_description = _json["description"]
 	new_food.buy_price = clampi(max_buy_price - food_discount, 0, max_buy_price)
 	new_food.texture = load(_json["sprite"])
+
+func _on_selected():
+	$AudioStreamPlayer.play()
